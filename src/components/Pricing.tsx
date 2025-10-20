@@ -52,8 +52,14 @@ const features = [
 ];
 
 const Pricing = () => {
+  const handleWhatsAppClick = (photos: number, price: number) => {
+    const message = `Olá! Gostaria de comprar o pacote de ${photos} fotos do StudioAI por US$ ${price.toFixed(2)}`;
+    const whatsappUrl = `https://wa.me/5548998386116?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
-    <section className="py-24 bg-muted/30">
+    <section id="pricing" className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
@@ -76,7 +82,15 @@ const Pricing = () => {
                 Experimente sem compromisso. Crie sua conta e receba 5 créditos na hora.
               </p>
             </div>
-            <Button variant="hero" size="lg" className="md:w-auto w-full">
+            <Button
+              variant="hero"
+              size="lg"
+              className="md:w-auto w-full"
+              onClick={() => {
+                const message = "Olá! Gostaria de começar com as 5 fotos grátis do StudioAI";
+                window.open(`https://wa.me/5548998386116?text=${encodeURIComponent(message)}`, "_blank");
+              }}
+            >
               Começar grátis
             </Button>
           </div>
@@ -118,6 +132,7 @@ const Pricing = () => {
                   variant={pkg.popular ? "hero" : "outline"}
                   className="w-full"
                   size="lg"
+                  onClick={() => handleWhatsAppClick(pkg.photos, pkg.price)}
                 >
                   Comprar pacote
                 </Button>

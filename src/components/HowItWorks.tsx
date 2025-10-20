@@ -25,7 +25,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-24 bg-background">
+    <section id="how-it-works" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">

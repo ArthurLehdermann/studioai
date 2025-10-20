@@ -36,11 +36,27 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button variant="hero" size="xl" className="group">
+            <Button
+              variant="hero"
+              size="xl"
+              className="group"
+              onClick={() => {
+                const message = "Olá! Gostaria de criar meu ensaio fotográfico com o StudioAI";
+                window.open(`https://wa.me/5548998386116?text=${encodeURIComponent(message)}`, "_blank");
+              }}
+            >
               Crie seu ensaio agora
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="xl" className="bg-background/10 backdrop-blur-md border-primary-foreground/20 text-primary-foreground hover:bg-background/20">
+            <Button
+              variant="outline"
+              size="xl"
+              className="bg-background/10 backdrop-blur-md border-primary-foreground/20 text-primary-foreground hover:bg-background/20"
+              onClick={() => {
+                const element = document.getElementById("templates");
+                if (element) element.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               Ver exemplos
             </Button>
           </div>
