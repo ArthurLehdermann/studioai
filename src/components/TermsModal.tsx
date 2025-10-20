@@ -110,10 +110,21 @@ const TermsModal = ({ open, onOpenChange }: TermsModalProps) => {
             </section>
 
             <section>
-              <h3 className="font-bold text-lg mb-2">9. Contato</h3>
+              <h3 className="font-bold text-lg mb-2">9. Dados da Empresa</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                <strong>Razão Social:</strong> BIGWORKS DESENVOLVIMENTO DE SISTEMAS E CONSULTORIA LTDA.<br />
+                <strong>Nome Fantasia:</strong> BigWorks<br />
+                <strong>CNPJ:</strong> 31.862.395/0001-65<br />
+                <strong>Endereço:</strong> Teutônia/RS, Brasil<br />
+                <strong>Email:</strong> StudioAI@bigworks.com.br
+              </p>
+            </section>
+
+            <section>
+              <h3 className="font-bold text-lg mb-2">10. Contato</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Para questões sobre estes Termos de Uso, entre em contato através do 
-                email: contato@studioai.com
+                email: StudioAI@bigworks.com.br
               </p>
             </section>
           </div>

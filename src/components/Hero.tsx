@@ -41,7 +41,11 @@ const Hero = () => {
               size="xl"
               className="group"
               onClick={() => {
-                const message = "Olá! Gostaria de criar meu ensaio fotográfico com o StudioAI";
+                const message = `🌟 Olá! Descobri o StudioAI e fiquei encantado!
+
+Quero transformar minhas fotos em ensaios profissionais de estúdio com qualidade de revista. 
+
+Podem me explicar como funciona? Estou pronto para começar! 📸✨`;
                 window.open(`https://wa.me/5548998386116?text=${encodeURIComponent(message)}`, "_blank");
               }}
             >

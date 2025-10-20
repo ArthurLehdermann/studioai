@@ -102,12 +102,20 @@ const Footer = () => {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="https://wa.me/5548998386116?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20StudioAI"
+                    href="https://wa.me/5548998386116?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20StudioAI.%20Podem%20me%20ajudar%3F"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-background/70 hover:text-background transition-colors"
                   >
                     Contato
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:StudioAI@bigworks.com.br"
+                    className="text-background/70 hover:text-background transition-colors"
+                  >
+                    Email
                   </a>
                 </li>
               </ul>

@@ -53,7 +53,14 @@ const features = [
 
 const Pricing = () => {
   const handleWhatsAppClick = (photos: number, price: number) => {
-    const message = `Olá! Gostaria de comprar o pacote de ${photos} fotos do StudioAI por US$ ${price.toFixed(2)}`;
+    const pricePerPhoto = (price / photos).toFixed(2);
+    const message = `✨ Olá! Quero transformar minhas fotos em ensaio profissional!
+
+📦 Pacote escolhido: ${photos} fotos
+💰 Investimento: US$ ${price.toFixed(2)} (apenas US$ ${pricePerPhoto} por foto)
+
+Gostaria de saber como proceder com o pagamento e envio das fotos. Obrigado!`;
+    
     const whatsappUrl = `https://wa.me/5548998386116?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
@@ -87,7 +94,11 @@ const Pricing = () => {
               size="lg"
               className="md:w-auto w-full"
               onClick={() => {
-                const message = "Olá! Gostaria de começar com as 5 fotos grátis do StudioAI";
+                const message = `🎁 Olá! Vi que vocês oferecem 5 fotos grátis do StudioAI e quero aproveitar!
+
+Gostaria de saber como criar minha conta e começar meu ensaio profissional agora mesmo. 
+
+Estou ansioso para ver minhas fotos transformadas! 😍`;
                 window.open(`https://wa.me/5548998386116?text=${encodeURIComponent(message)}`, "_blank");
               }}
             >

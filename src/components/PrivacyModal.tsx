@@ -157,18 +157,29 @@ const PrivacyModal = ({ open, onOpenChange }: PrivacyModalProps) => {
             </section>
 
             <section>
-              <h3 className="font-bold text-lg mb-2">13. Contato e Encarregado de Dados</h3>
+              <h3 className="font-bold text-lg mb-2">13. Dados da Empresa</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Para exercer seus direitos ou esclarecer dúvidas sobre privacidade:
-              </p>
-              <p className="text-muted-foreground leading-relaxed mt-2">
-                Email: privacidade@studioai.com<br />
-                Encarregado de Dados (DPO): dpo@studioai.com
+                <strong>Razão Social:</strong> BIGWORKS DESENVOLVIMENTO DE SISTEMAS E CONSULTORIA LTDA.<br />
+                <strong>Nome Fantasia:</strong> BigWorks<br />
+                <strong>CNPJ:</strong> 31.862.395/0001-65<br />
+                <strong>Endereço:</strong> Teutônia/RS, Brasil
               </p>
             </section>
 
             <section>
-              <h3 className="font-bold text-lg mb-2">14. Autoridade Nacional de Proteção de Dados</h3>
+              <h3 className="font-bold text-lg mb-2">14. Contato e Encarregado de Dados</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Para exercer seus direitos ou esclarecer dúvidas sobre privacidade:
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-2">
+                <strong>Email Geral:</strong> StudioAI@bigworks.com.br<br />
+                <strong>Encarregado de Dados (DPO):</strong> lgpd@bigworks.com.br<br />
+                <strong>Telefone/WhatsApp:</strong> +55 (48) 99838-6116
+              </p>
+            </section>
+
+            <section>
+              <h3 className="font-bold text-lg mb-2">15. Autoridade Nacional de Proteção de Dados</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Você também pode contatar a ANPD (Autoridade Nacional de Proteção de Dados) 
                 para questões relacionadas à proteção de dados pessoais.
