@@ -2,10 +2,12 @@
 import { useState } from "react";
 import TermsModal from "./TermsModal";
 import PrivacyModal from "./PrivacyModal";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
   const [termsOpen, setTermsOpen] = useState(false);
   const [privacyOpen, setPrivacyOpen] = useState(false);
+  const { t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -23,20 +25,20 @@ const Footer = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-gradient">StudioAI</h3>
               <p className="text-background/70">
-                Ensaios fotográficos profissionais com inteligência artificial.
+                {t('footer.tagline')}
               </p>
             </div>
 
             {/* Produto */}
             <div>
-              <h4 className="font-bold mb-4">Produto</h4>
+              <h4 className="font-bold mb-4">{t('footer.product')}</h4>
               <ul className="space-y-2">
                 <li>
                   <button
                     onClick={() => scrollToSection("templates")}
                     className="text-background/70 hover:text-background transition-colors text-left"
                   >
-                    Templates
+                    {t('footer.templates')}
                   </button>
                 </li>
                 <li>
@@ -44,7 +46,7 @@ const Footer = () => {
                     onClick={() => scrollToSection("how-it-works")}
                     className="text-background/70 hover:text-background transition-colors text-left"
                   >
-                    Como funciona
+                    {t('footer.howitworks')}
                   </button>
                 </li>
                 <li>
@@ -52,7 +54,7 @@ const Footer = () => {
                     onClick={() => scrollToSection("pricing")}
                     className="text-background/70 hover:text-background transition-colors text-left"
                   >
-                    Preços
+                    {t('footer.pricing')}
                   </button>
                 </li>
               </ul>
@@ -60,7 +62,7 @@ const Footer = () => {
 
             {/* Empresa */}
             <div>
-              <h4 className="font-bold mb-4">Empresa</h4>
+              <h4 className="font-bold mb-4">{t('footer.company')}</h4>
               <ul className="space-y-2">
                 <li>
                   <a
@@ -69,7 +71,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="text-background/70 hover:text-background transition-colors"
                   >
-                    Contato
+                    {t('footer.contact')}
                   </a>
                 </li>
                 <li>
@@ -77,7 +79,7 @@ const Footer = () => {
                     href="mailto:StudioAI@bigworks.com.br"
                     className="text-background/70 hover:text-background transition-colors"
                   >
-                    Email
+                    {t('footer.email')}
                   </a>
                 </li>
               </ul>
@@ -85,14 +87,14 @@ const Footer = () => {
 
             {/* Legal */}
             <div>
-              <h4 className="font-bold mb-4">Legal</h4>
+              <h4 className="font-bold mb-4">{t('footer.legal')}</h4>
               <ul className="space-y-2">
                 <li>
                   <button
                     onClick={() => setTermsOpen(true)}
                     className="text-background/70 hover:text-background transition-colors text-left"
                   >
-                    Termos de uso
+                    {t('footer.terms')}
                   </button>
                 </li>
                 <li>
@@ -100,7 +102,7 @@ const Footer = () => {
                     onClick={() => setPrivacyOpen(true)}
                     className="text-background/70 hover:text-background transition-colors text-left"
                   >
-                    Privacidade e LGPD
+                    {t('footer.privacy')}
                   </button>
                 </li>
               </ul>
@@ -109,7 +111,7 @@ const Footer = () => {
 
         <div className="border-t border-background/20 pt-8 text-center">
           <p className="text-background/70 text-sm">
-            © 2025 StudioAI. Todos os direitos reservados. Democratizando a fotografia profissional através da IA.
+            {t('footer.rights')}
           </p>
         </div>
       </div>

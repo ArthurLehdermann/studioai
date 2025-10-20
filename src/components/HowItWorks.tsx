@@ -1,38 +1,41 @@
 import { Upload, Wand2, Download, Sparkles } from "lucide-react";
-
-const steps = [
-  {
-    icon: Upload,
-    title: "Envie suas fotos",
-    description: "Faça upload de algumas fotos suas. A IA usa essas referências para manter seus traços reais.",
-  },
-  {
-    icon: Wand2,
-    title: "Escolha o template",
-    description: "Selecione entre estilos profissionais: corporativo, moda, lifestyle, viagem e muito mais.",
-  },
-  {
-    icon: Sparkles,
-    title: "IA cria seu ensaio",
-    description: "Em segundos, a inteligência transforma suas fotos em retratos de estúdio profissionais.",
-  },
-  {
-    icon: Download,
-    title: "Baixe e compartilhe",
-    description: "Salve em alta resolução ou compartilhe direto no Instagram, LinkedIn e redes sociais.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HowItWorks = () => {
+  const { t } = useLanguage();
+
+  const steps = [
+    {
+      icon: Upload,
+      titleKey: "howitworks.step1.title",
+      descKey: "howitworks.step1.desc",
+    },
+    {
+      icon: Wand2,
+      titleKey: "howitworks.step2.title",
+      descKey: "howitworks.step2.desc",
+    },
+    {
+      icon: Sparkles,
+      titleKey: "howitworks.step3.title",
+      descKey: "howitworks.step3.desc",
+    },
+    {
+      icon: Download,
+      titleKey: "howitworks.step4.title",
+      descKey: "howitworks.step4.desc",
+    },
+  ];
+
   return (
     <section id="how-it-works" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Como funciona
+            {t('howitworks.title')}
           </h2>
           <p className="text-xl text-muted-foreground">
-            Quatro passos simples para ter seu ensaio profissional pronto
+            {t('howitworks.subtitle')}
           </p>
         </div>
 
@@ -52,8 +55,8 @@ const HowItWorks = () => {
                     {index + 1}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                <h3 className="text-xl font-bold">{t(step.titleKey)}</h3>
+                <p className="text-muted-foreground leading-relaxed">{t(step.descKey)}</p>
               </div>
             );
           })}
