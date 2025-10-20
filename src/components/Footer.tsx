@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
+
 import { useState } from "react";
 import TermsModal from "./TermsModal";
 import PrivacyModal from "./PrivacyModal";
@@ -23,46 +23,8 @@ const Footer = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-gradient">StudioAI</h3>
               <p className="text-background/70">
-                Seu ensaio perfeito, criado pela inteligência.
+                Ensaios fotográficos profissionais com inteligência artificial.
               </p>
-              <div className="flex gap-4">
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-background/10 hover:bg-background/20 flex items-center justify-center transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-              </div>
             </div>
 
             {/* Produto */}

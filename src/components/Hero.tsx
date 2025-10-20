@@ -24,10 +24,11 @@ const Hero = () => {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground leading-tight tracking-tight">
-            Seu ensaio perfeito,{" "}
+            Ensaios fotográficos{" "}
             <span className="relative">
-              <span className="text-accent">criado pela inteligência</span>
+              <span className="text-accent">profissionais</span>
             </span>
+            {" "}sem sair de casa
           </h1>
 
           <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
